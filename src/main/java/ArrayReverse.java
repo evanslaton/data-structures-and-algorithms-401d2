@@ -1,5 +1,7 @@
 public class ArrayReverse {
     public static void main(String[] args) {
+
+        // Creating an array to test the reverseArray function
         int[] arrayToReverse = new int[6];
 
         for(int i = 0; i < 6; i++) {
