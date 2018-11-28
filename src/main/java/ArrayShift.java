@@ -2,14 +2,14 @@ import java.util.Arrays;
 
 public class ArrayShift {
     public static void main(String[] args) {
-        int[] testArray1 = { 2, 4, 6, 8 };
-        int testVal1 = 5;
-        insertShiftArray(testArray1, testVal1);
-        System.out.println(Arrays.toString(insertShiftArray(testArray1, testVal1)));
-
-        int[] testArray2 = { 4, 8, 15, 23, 42 };
-        int testVal2 = 16;
-        System.out.println(Arrays.toString(insertShiftArray(testArray2, testVal2)));
+//        int[] testArray1 = { 2, 4, 6, 8 };
+//        int testVal1 = 5;
+//        insertShiftArray(testArray1, testVal1);
+//        System.out.println(Arrays.toString(insertShiftArray(testArray1, testVal1)));
+//
+//        int[] testArray2 = { 4, 8, 15, 23, 42 };
+//        int testVal2 = 16;
+//        System.out.println(Arrays.toString(insertShiftArray(testArray2, testVal2)));
     }
 
     public static int[] insertShiftArray(int[] arrayToShift, int valueToAdd) {
