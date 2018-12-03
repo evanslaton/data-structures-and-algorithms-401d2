@@ -3,16 +3,6 @@ package linkedlist;
 import java.util.ArrayList;
 
 public class LinkedList {
-    public static void main(String[] args) {
-        LinkedList ll = new LinkedList();
-        ll.insert(10);
-        ll.insert(15);
-        ll.insert(20);
-        ll.insert(25);
-
-        ll.print();
-    }
-
     public Node head;
 
     // Constructor
@@ -47,7 +37,7 @@ public class LinkedList {
             linkedListValues.add(currentNode.value);
             currentNode = currentNode.next;
         }
-        System.out.println("LinkedList Value: " + linkedListValues);
+        System.out.println("LinkedList Value(s): " + linkedListValues);
         return linkedListValues;
     }
 }
