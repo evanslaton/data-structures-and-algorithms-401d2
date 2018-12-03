@@ -16,6 +16,6 @@ For each method I took the approach that was most efficient:
 .print() - Big O space and time of n (linear).
 
 ## API
-.insert(value) - adds a new node with the value to the head of the list.
-.includes(value) - returns a boolean depending on whether the value exists as a Node’s value somewhere within the list.
-.print() - prints all of the Node values in the Linked List.
+* .insert(value) - adds a new node with the value to the head of the list.
+* .includes(value) - returns a boolean depending on whether the value exists as a Node’s value somewhere within the list.
+* .print() - prints all of the Node values in the Linked List.
