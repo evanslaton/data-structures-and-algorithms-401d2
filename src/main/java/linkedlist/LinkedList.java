@@ -8,7 +8,7 @@ public class LinkedList {
         ll.insert(1);
         ll.insert(2);
         ll.insert(3);
-        ll.append(0);
+        ll.insertBefore(4, 100);
         ll.print();
     }
 
@@ -50,12 +50,33 @@ public class LinkedList {
         return linkedListValues;
     }
 
-    //
+    // Adds a node with the specified value to the end of the linkedlist
     public void append(int value) {
         Node current = this.head;
         while (current != null) {
             if (current.next == null) {
                 Node newNode = new Node(value);
+                current.next = newNode;
+                break;
+            }
+            current = current.next;
+        }
+    }
+
+    // Inserts a new node with the newValue before the node with the specified value
+    public void insertBefore(int value, int newValue) {
+        if (this.head.value == value) {
+            this.insert(newValue);
+            return;
+        } else if (!this.includes(value)) {
+            return;
+        }
+
+        Node current = this.head;
+        while (current != null) {
+            if (current.next.value == value) {
+                Node newNode = new Node(newValue);
+                newNode.next = current.next;
                 current.next = newNode;
                 break;
             }
