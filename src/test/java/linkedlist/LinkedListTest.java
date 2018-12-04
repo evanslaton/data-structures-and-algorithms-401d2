@@ -118,4 +118,65 @@ public class LinkedListTest {
 
         assertEquals("Should be 4", testArrayList.size(), testLinkedList.print().size());
     }
+
+    @Test
+    public void testAppend() {
+        LinkedList testLinkedList = new LinkedList();
+        testLinkedList.insert(4);
+        testLinkedList.insert(107);
+        testLinkedList.insert(41);
+        testLinkedList.append(53);
+
+        // Gets the length of the linkedlist
+        Node current = testLinkedList.head;
+        int testLinkedListLength = 0;
+        while (current != null) {
+            testLinkedListLength++;
+            current = current.next;
+        }
+        assertTrue("Should return true", testLinkedList.includes(53));
+        assertEquals("Should be 4", 4, testLinkedListLength);
+        assertEquals("Should be 53", 53, testLinkedList.head.next.next.next.value);
+    }
+
+    @Test
+    public void testInsertBefore() {
+        LinkedList testLinkedList = new LinkedList();
+        testLinkedList.insert(5000);
+        testLinkedList.insert(10000);
+        testLinkedList.insert(700000);
+        testLinkedList.insertBefore(10000, 3);
+
+        // Gets the length of the linkedlist
+        Node current = testLinkedList.head;
+        int testLinkedListLength = 0;
+        while (current != null) {
+            testLinkedListLength++;
+            current = current.next;
+        }
+        assertTrue("Should return true", testLinkedList.includes(3));
+        assertEquals("Should be 4", 4, testLinkedListLength);
+        assertEquals("Should be 3", 3, testLinkedList.head.next.value);
+    }
+
+    @Test
+    public void testInsertAfter() {
+        LinkedList testLinkedList = new LinkedList();
+        testLinkedList.insert(0);
+        testLinkedList.insert(123);
+        testLinkedList.insert(9999);
+        testLinkedList.insert(53);
+        testLinkedList.insertAfter(53, 482);
+
+        // Gets the length of the linkedlist
+        Node current = testLinkedList.head;
+        int testLinkedListLength = 0;
+        while (current != null) {
+            testLinkedListLength++;
+            current = current.next;
+        }
+        assertTrue("Should return true", testLinkedList.includes(482));
+        assertEquals("Should be 5", 5, testLinkedListLength);
+        assertEquals("Should be 842", 482, testLinkedList.head.next.value);
+    }
 }

@@ -19,14 +19,14 @@ public class LinkedList {
         this.head = null;
     }
 
-    // Inserts a new node with the specified value into the linked list
+    // Inserts a new node with the specified value into the beginning of the linkedlist
     public void insert(int value) {
         Node newNode = new Node(value);
         newNode.next = this.head;
         this.head = newNode;
     }
 
-    // Determines if a specified value is stored in the linked list
+    // Determines if a specified value is stored in the linkedlist
     public boolean includes(int valueToFind) {
         Node currentNode = this.head;
         while (currentNode != null) {
@@ -84,7 +84,7 @@ public class LinkedList {
         }
     }
 
-    //
+    // Inserts a new node with the newValue after the node with the specified value
     public void insertAfter(int value, int newValue) {
         if (!this.includes(value)) {
             return;
