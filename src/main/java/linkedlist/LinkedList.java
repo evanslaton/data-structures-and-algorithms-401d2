@@ -8,7 +8,7 @@ public class LinkedList {
         ll.insert(1);
         ll.insert(2);
         ll.insert(3);
-        ll.insertBefore(4, 100);
+        ll.insertAfter(1, 100);
         ll.print();
     }
 
@@ -75,6 +75,24 @@ public class LinkedList {
         Node current = this.head;
         while (current != null) {
             if (current.next.value == value) {
+                Node newNode = new Node(newValue);
+                newNode.next = current.next;
+                current.next = newNode;
+                break;
+            }
+            current = current.next;
+        }
+    }
+
+    //
+    public void insertAfter(int value, int newValue) {
+        if (!this.includes(value)) {
+            return;
+        }
+
+        Node current = this.head;
+        while (current != null) {
+            if (current.value == value) {
                 Node newNode = new Node(newValue);
                 newNode.next = current.next;
                 current.next = newNode;
