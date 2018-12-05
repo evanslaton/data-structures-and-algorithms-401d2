@@ -179,4 +179,20 @@ public class LinkedListTest {
         assertEquals("Should be 5", 5, testLinkedListLength);
         assertEquals("Should be 842", 482, testLinkedList.head.next.value);
     }
+
+    @Test
+    public void testGetKFromEnd() {
+        LinkedList testLinkedList = new LinkedList();
+        testLinkedList.insert(45);
+        testLinkedList.insert(13);
+        testLinkedList.insert(85);
+        testLinkedList.insert(98765);
+        testLinkedList.insert(0);
+        testLinkedList.insert(6456);
+        
+        assertEquals("Should be 98765", 85, testLinkedList.getKFromEnd(2));
+        assertEquals("Should be 6456", 6456, testLinkedList.getKFromEnd(5));
+        assertEquals("Should be 6456", 45, testLinkedList.getKFromEnd(0));
+        assertEquals("Should be -1", -1, testLinkedList.getKFromEnd(20));
+    }
 }

@@ -3,3 +3,4 @@
 * [Code Challenge 3 - array_binary_search.jpg](readme/array_binary_search.md)
 * [Lab 05: Linked Lists](readme/linked_list.md)
 * [Code Challenge 6 - ll_insertions](readme/ll_insertions.md)
+* [Code Challenge 7 - ll_kth_from_end](readme/ll_kth_from_end.md)

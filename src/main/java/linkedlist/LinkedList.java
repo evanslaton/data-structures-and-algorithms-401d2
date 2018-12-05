@@ -101,4 +101,24 @@ public class LinkedList {
             current = current.next;
         }
     }
+
+    // Return the node’s value that is k from the end of the linked list, returns -1 if the k is longer than the list
+    public int getKFromEnd(int k) {
+        Node current = this.head;
+
+        while (current != null) {
+            Node kFromEnd = current;
+            for (int i = 0; i < k; i++) {
+                if (kFromEnd.next == null && i != k - 1) {
+                    return -1;
+                }
+                kFromEnd = kFromEnd.next;
+            }
+            if (kFromEnd.next == null) {
+                return current.value;
+            }
+            current = current.next;
+        }
+        return -1;
+    }
 }
