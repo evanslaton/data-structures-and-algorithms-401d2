@@ -3,15 +3,6 @@ package linkedlist;
 import java.util.ArrayList;
 
 public class LinkedList {
-    public static void main(String[] args) {
-        LinkedList ll = new LinkedList();
-        ll.insert(1);
-        ll.insert(2);
-        ll.insert(3);
-        ll.insertAfter(1, 100);
-        ll.print();
-    }
-
     public Node head;
 
     // Constructor
@@ -120,5 +111,34 @@ public class LinkedList {
             current = current.next;
         }
         return -1;
+    }
+
+    // Returns a linked list that is the result of merging two linked lists together
+    public static Node merge(LinkedList one, LinkedList two) {
+        if (one.head == null) {
+            return two.head;
+        } else if (two.head == null) {
+            return one.head;
+        }
+
+        Node current = one.head;
+        Node tempOne = current.next;
+        Node tempTwo = two.head.next;
+        while (current != null) {
+            if (current.next == null && two.head != null) {
+                current.next = two.head;
+                return one.head;
+            }
+            current.next = two.head;
+            two.head.next = tempOne;
+            if (tempTwo == null) {
+                return one.head;
+            }
+            two.head = tempTwo;
+            current = tempOne;
+            tempOne = current.next;
+            tempTwo = two.head.next;
+        }
+        return one.head;
     }
 }

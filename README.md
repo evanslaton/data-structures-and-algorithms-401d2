@@ -4,3 +4,4 @@
 * [Lab 05: Linked Lists](readme/linked_list.md)
 * [Code Challenge 6 - ll_insertions](readme/ll_insertions.md)
 * [Code Challenge 7 - ll_kth_from_end](readme/ll_kth_from_end.md)
+* [Code Challenge 8 - ll_merge](readme/ll_merge.md)
