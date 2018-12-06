@@ -10,4 +10,4 @@ I merged the linked list passed in as the second argument into the linked list p
 * Space: (1)
 
 ## Solution
-![ll_merge.jpg](../assets/ll_merge.jpg.jpg)
+![ll_merge.jpg](../assets/ll_merge.jpg)
