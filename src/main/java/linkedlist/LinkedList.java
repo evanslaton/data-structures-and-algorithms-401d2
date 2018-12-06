@@ -4,12 +4,49 @@ import java.util.ArrayList;
 
 public class LinkedList {
     public static void main(String[] args) {
-        LinkedList ll = new LinkedList();
-        ll.insert(1);
-        ll.insert(2);
-        ll.insert(3);
-        ll.insertAfter(1, 100);
-        ll.print();
+        LinkedList one = new LinkedList();
+        one.insert(3);
+        one.insert(2);
+        one.insert(1);
+        one.print();
+
+        LinkedList two = new LinkedList();
+        two.insert(300);
+        two.insert(200);
+        two.insert(100);
+        two.print();
+
+        Node test = merge(one, two);
+        System.out.println(test.value);
+    }
+
+    // Returns a linked list that is the result of merging two linked lists together
+    public static Node merge(LinkedList one, LinkedList two) {
+        if (one.head == null) {
+            return two.head;
+        } else if (two.head == null) {
+            return one.head;
+        }
+
+        Node current = one.head;
+        Node tempOne = current.next;
+        Node tempTwo = two.head.next;
+        while (current != null) {
+            if (current.next == null && two.head != null) {
+                current.next = two.head;
+                return one.head;
+            }
+            current.next = two.head;
+            two.head.next = tempOne;
+            if (tempTwo == null) {
+                return one.head;
+            }
+            two.head = tempTwo;
+            current = tempOne;
+            tempOne = current.next;
+            tempTwo = two.head.next;
+        }
+        return one.head;
     }
 
     public Node head;
@@ -121,4 +158,6 @@ public class LinkedList {
         }
         return -1;
     }
+
+
 }
