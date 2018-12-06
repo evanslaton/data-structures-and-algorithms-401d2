@@ -3,23 +3,6 @@ package linkedlist;
 import java.util.ArrayList;
 
 public class LinkedList {
-    public static void main(String[] args) {
-        LinkedList one = new LinkedList();
-        one.insert(3);
-        one.insert(2);
-        one.insert(1);
-        one.print();
-
-        LinkedList two = new LinkedList();
-        two.insert(300);
-        two.insert(200);
-        two.insert(100);
-        two.print();
-
-        Node test = merge(one, two);
-        System.out.println(test.value);
-        one.print();
-    }
     public Node head;
 
     // Constructor
