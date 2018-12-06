@@ -195,4 +195,52 @@ public class LinkedListTest {
         assertEquals("Should be 6456", 45, testLinkedList.getKFromEnd(0));
         assertEquals("Should be -1", -1, testLinkedList.getKFromEnd(20));
     }
+
+    @Test
+    public void testMerge() {
+        LinkedList one = new LinkedList();
+        LinkedList two = new LinkedList();
+        assertEquals("Should be null", null , LinkedList.merge(one, two));
+
+        // Testing when the arguments are equal in length
+        one.insert(5);
+        one.insert(3);
+        one.insert(1);
+        two.insert(6);
+        two.insert(4);
+        two.insert(2);
+        Node test = LinkedList.merge(one, two);
+        for (int i = 1; i < 7; i++) {
+            assertEquals("Should equal to i each time around", i, test.value);
+            test = test.next;
+        }
+
+        // Testing when the first argument is longer than the second
+        LinkedList three = new LinkedList();
+        LinkedList four = new LinkedList();
+        three.insert(5);
+        three.insert(3);
+        three.insert(1);
+        four.insert(4);
+        four.insert(2);
+        test = LinkedList.merge(three, four);
+        for (int i = 1; i < 6; i++) {
+            assertEquals("Should equal to i each time around", i, test.value);
+            test = test.next;
+        }
+
+        // Testing when the first argument is shorter than the second
+        LinkedList five = new LinkedList();
+        LinkedList six = new LinkedList();
+        five.insert(3);
+        five.insert(1);
+        six.insert(5);
+        six.insert(4);
+        six.insert(2);
+        test = LinkedList.merge(five, six);
+        for (int i = 1; i < 6; i++) {
+            assertEquals("Should equal to i each time around", i, test.value);
+            test = test.next;
+        }
+    }
 }
