@@ -1,6 +1,6 @@
 package StacksAndQueues;
 
-public class Stack<T> {
+public class Stack<T> implements Reconnaissance {
     // Instance properties
     protected Node<T> top;
 
