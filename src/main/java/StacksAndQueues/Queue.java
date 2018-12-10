@@ -30,6 +30,9 @@ public class Queue<T> implements Reconnaissance {
         } else {
             T frontNodeValue = this.front.value;
             this.front = this.front.next;
+            if (this.front == null) {
+                this.rear = null;
+            }
             return frontNodeValue;
         }
     }
