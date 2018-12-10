@@ -1,6 +1,6 @@
 package StacksAndQueues;
 
-public class Queue<T> {
+public class Queue<T> implements Reconnaissance {
     // Instance properties
     protected Node<T> front;
     protected Node<T> rear;
