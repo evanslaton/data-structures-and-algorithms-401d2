@@ -1,10 +1,10 @@
 package StacksAndQueues;
 
-public class Node {
-    public int value;
+public class Node<T> {
+    public T value;
     public Node next;
 
-    Node(int value, Node next) {
+    Node(T value, Node next) {
         this.value = value;
         this.next = next;
     }
