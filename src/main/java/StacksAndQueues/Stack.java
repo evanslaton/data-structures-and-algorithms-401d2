@@ -5,7 +5,7 @@ public class Stack<T> implements Reconnaissance {
     protected Node<T> top;
 
     // Constructor
-    Stack() {
+    public Stack() {
         this.top = null;
     }
 

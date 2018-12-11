@@ -6,7 +6,7 @@ public class Queue<T> implements Reconnaissance {
     protected Node<T> rear;
 
     // Constructor
-    Queue() {
+    public Queue() {
         this.front = null;
         this.rear = null;
     }
