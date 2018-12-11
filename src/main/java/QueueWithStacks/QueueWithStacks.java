@@ -2,7 +2,7 @@ package QueueWithStacks;
 
 import StacksAndQueues.Stack;
 
-public class QueueWithStacks<T>  implements {
+public class QueueWithStacks<T>  {
     Stack<T> firstStack;
     Stack<T> secondStack;
 
@@ -12,7 +12,7 @@ public class QueueWithStacks<T>  implements {
         this.secondStack = new Stack();
     }
 
-    //
+    // Adds a new node with the specified value to the back of the queue
     public void enqueue(T value) {
         if (firstStack.peek() == null) {
             firstStack.push(value);
@@ -27,8 +27,9 @@ public class QueueWithStacks<T>  implements {
         }
     }
 
+    // Removes the node from the front of the queue, and returns that node's value
     public T dequeue() {
-        return firstStack.pop();
+        return firstStack.peek() == null ? null : firstStack.pop();
     }
 
 }
