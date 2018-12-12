@@ -3,7 +3,7 @@ package FIFOAnimalShelter;
 import StacksAndQueues.Node;
 
 public class AnimalShelter<T> {
-        // Instance properties
+    // Instance properties
     protected Node<T> front;
     protected Node<T> rear;
 
