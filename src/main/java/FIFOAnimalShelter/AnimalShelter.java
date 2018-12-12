@@ -3,32 +3,7 @@ package FIFOAnimalShelter;
 import StacksAndQueues.Node;
 
 public class AnimalShelter<T> {
-    public static void main(String[] args) {
-        AnimalShelter a = new AnimalShelter();
-        a.enqueue(new Animal("cat"));
-        a.enqueue(new Animal("dog"));
-        a.enqueue(new Animal("turtle"));
-        a.enqueue(new Animal("hamster"));
-        a.enqueue(new Animal("dog"));
-        a.enqueue(new Animal("bird"));
-        Node current = a.front;
-        while (current != null) {
-            System.out.println(current.value.toString());
-            current = current.next;
-        }
-
-        System.out.println("**********************************");
-        System.out.println("Dequeued Animal: " + a.dequeue("cat"));
-        System.out.println("**********************************");
-
-        current = a.front;
-        while (current != null) {
-            System.out.println(current.value.toString());
-            current = current.next;
-        }
-    }
-
-    // Instance properties
+        // Instance properties
     protected Node<T> front;
     protected Node<T> rear;
 
@@ -55,25 +30,19 @@ public class AnimalShelter<T> {
         Node previous = this.front;
         Node current = this.front;
         while (current != null) {
-            System.out.println("Previous -> " + previous.value.toString());
-            System.out.println("Current -> " + current.value.toString());
             if (current.value.toString() == animalType) {
                 // Points front and rear to null if nothing else is in the queue
                 if (current == previous && current.next == null) {
-                    System.out.println(1);
                     this.front = null;
                     this.rear = null;
                 // Points front to the next node if the first node is being removed
                 } else if (current == previous && current.next != null) {
-                    System.out.println(2);
                     this.front = this.front.next;
                 // Points rear to the previous node if the last node is being removed
                 } else if (current == this.rear) {
-                    System.out.println(3);
                     this.rear = previous;
                 }
                 if (current != previous) {
-                    System.out.println(4);
                     previous.next = previous.next.next;
                 }
                 return current.value;
