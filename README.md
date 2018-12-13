@@ -7,4 +7,5 @@
 * [Code Challenge 8 - ll_merge](readme/ll_merge.md)
 * [Lab 10: Stacks and Queues - stack_and_queue](readme/stack_and_queue.md)
 * [Code Challenge 11 - queue_with_stacks](readme/queue_with_stacks.md)
-* [Code Challenge 12 - First-in, First out Animal Shelter] (readme/fifo_animal_shelter.md)
+* [Code Challenge 12 - First-in, First out Animal Shelter](readme/fifo_animal_shelter.md)
+* [Code Challenge 13 - Multi-bracket Validation](readme/multi-bracket-validation.md)
