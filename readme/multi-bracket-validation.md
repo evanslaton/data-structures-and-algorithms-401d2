@@ -14,4 +14,4 @@ I used a stack to keep track of the order of opening brackets. Since the methods
 * O(n) Space
 
 ## Solution
-![array_binary_search.jpg](../assets/multi-bracket-validation)
+![array_binary_search.jpg](../assets/multi-bracket-validation.jpg)
