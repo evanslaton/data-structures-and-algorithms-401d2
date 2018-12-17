@@ -22,6 +22,7 @@ public class BinaryTree {
 
     Node root;
 
+    // Constructor
     BinaryTree() {
         this.root = null;
     }
