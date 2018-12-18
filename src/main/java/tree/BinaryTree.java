@@ -15,22 +15,13 @@ public class BinaryTree<T> {
 
         Node[] values = testBinaryTree.postOrder(testBinaryTree.root);
 
-        System.out.println(values[0].value);
-        System.out.println(values[1].value);
-        System.out.println(values[2].value);
-        System.out.println(values[3].value);
-        System.out.println(values[4].value);
-
-
-//        testBinaryTree.inOrder();
-//        testBinaryTree.postOrder();
+//        System.out.println(Arrays.toString(values));
     }
 
-
-    Node<T> root;
+    public Node<T> root;
 
     // Constructor
-    BinaryTree() {
+    public BinaryTree() {
         this.root = null;
     }
 
@@ -68,6 +59,7 @@ public class BinaryTree<T> {
         } else {
             List<Node> nodes = new ArrayList<>();
             this.inOrderHelper(this.root, nodes);
+            System.out.println(nodes);
             Node[] nodeArray = new Node[nodes.size()];
             nodeArray = nodes.toArray(nodeArray);
             return nodeArray;
