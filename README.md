@@ -10,3 +10,4 @@
 * [Code Challenge 12 - First-in, First out Animal Shelter](readme/fifo_animal_shelter.md)
 * [Code Challenge 13 - Multi-bracket Validation](readme/multi-bracket-validation.md)
 * [Code Challenge 16 - FizzBuzz](readme/fizzbuzztree.md)
+* [Code Challenge 17 - Breadth-first Traversal](breadth-first-traversal.md)
