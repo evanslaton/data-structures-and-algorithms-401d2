@@ -10,4 +10,4 @@ O(n) - space
 O(n) - time
 
 ## Solution
-![find-maximum-value-binary-tree](../find-maximum-value-binary-tree.jpg)
+![find-maximum-value-binary-tree](../assets/find-maximum-value-binary-tree.jpg)
