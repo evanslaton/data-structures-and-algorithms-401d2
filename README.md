@@ -11,3 +11,4 @@
 * [Code Challenge 13 - Multi-bracket Validation](readme/multi-bracket-validation.md)
 * [Code Challenge 16 - FizzBuzz](readme/fizzbuzztree.md)
 * [Code Challenge 17 - Breadth-first Traversal](breadth-first-traversal.md)
+* [Code Challenge 18 - Find the Maximum Value in a Binary Tree](find-maximum-value-binary-tree.md)
