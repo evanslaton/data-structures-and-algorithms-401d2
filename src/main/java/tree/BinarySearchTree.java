@@ -2,27 +2,27 @@ package tree;
 
 public class BinarySearchTree extends BinaryTree {
 
-    public static void main(String[] args) {
-        BinarySearchTree testTree = new BinarySearchTree();
-       testTree.root = new Node(100, null, null);
-       testTree.add(50);
-        testTree.add(49);
-        testTree.add(125);
-        testTree.add(49);
-
+//    public static void main(String[] args) {
+//        BinarySearchTree testTree = new BinarySearchTree();
+//       testTree.root = new Node(100, null, null);
+//       testTree.add(50);
+//        testTree.add(49);
+//        testTree.add(125);
+//        testTree.add(49);
+//
 //               new Node(50,
 //                       new Node(25, null, null),
 //                       new Node(75, null, null)),
 //               new Node(150,
 //                       new Node(125, null, null),
 //                       new Node(175, null, null)));
-
-        System.out.println(testTree.root.value);
-        System.out.println(testTree.root.left.value);
-        System.out.println(testTree.root.left.left.value);
-        System.out.println(testTree.root.right.value);
-        System.out.println(testTree.contains(1000));
-    }
+//
+//        System.out.println(testTree.root.value);
+//        System.out.println(testTree.root.left.value);
+//        System.out.println(testTree.root.left.left.value);
+//        System.out.println(testTree.root.right.value);
+//        System.out.println(testTree.contains(1000));
+//    }
 
     // Constructor
     public BinarySearchTree() {
@@ -32,6 +32,9 @@ public class BinarySearchTree extends BinaryTree {
     // Got help from https://www.baeldung.com/
     // Adds the value to the tree whose root you pass in as the first parameter
     public void add(Integer value) {
+        if (this.root == null) {
+            this.root = new Node(value, null, null);
+        }
         addHelper(this.root, value);
     }
 
@@ -61,7 +64,7 @@ public class BinarySearchTree extends BinaryTree {
         if (node == null) {
             return false;
         }
-        if (node.value == value) {
+        if (node.value.equals(value)) {
             return true;
         }
         return value < node.value ? containsHelper(node.left, value) : containsHelper(node.right, value);

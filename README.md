@@ -9,3 +9,4 @@
 * [Code Challenge 11 - queue_with_stacks](readme/queue_with_stacks.md)
 * [Code Challenge 12 - First-in, First out Animal Shelter](readme/fifo_animal_shelter.md)
 * [Code Challenge 13 - Multi-bracket Validation](readme/multi-bracket-validation.md)
+* [Lab 15: Trees](readme/tree.md)
