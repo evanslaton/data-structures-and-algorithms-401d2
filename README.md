@@ -10,3 +10,6 @@
 * [Code Challenge 12 - First-in, First out Animal Shelter](readme/fifo_animal_shelter.md)
 * [Code Challenge 13 - Multi-bracket Validation](readme/multi-bracket-validation.md)
 * [Lab 15: Trees](readme/tree.md)
+* [Code Challenge 16 - FizzBuzz](readme/fizzbuzztree.md)
+* [Code Challenge 17 - Breadth-first Traversal](readme/breadth-first-traversal.md)
+* [Code Challenge 18 - Find the Maximum Value in a Binary Tree](readme/find-maximum-value-binary-tree.md)
