@@ -4,25 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BinaryTree<T> {
-<<<<<<< HEAD
-    Node<T> root;
-=======
-    public static void main(String[] args) {
-        BinaryTree testBinaryTree = new BinaryTree();
-
-        testBinaryTree.root = new Node(-21, null, null);
-        testBinaryTree.root.left = new Node(99, null, null);
-        testBinaryTree.root.right = new Node(496, null, null);
-        testBinaryTree.root.right.left = new Node (32, null, null);
-        testBinaryTree.root.right.right = new Node (3, null, null);
-
-        Node[] values = testBinaryTree.postOrder(testBinaryTree.root);
-
-//        System.out.println(Arrays.toString(values));
-    }
-
     public Node<T> root;
->>>>>>> master
 
     // Constructor
     public BinaryTree() {
@@ -60,20 +42,11 @@ public class BinaryTree<T> {
             System.out.println("This tree is empty.");
             return null;
         } else {
-<<<<<<< HEAD
             List<T> values = new ArrayList<>();
             this.inOrderHelper(this.root, values);
             Object[] valuesArray = new Object[values.size()];
             valuesArray = values.toArray(valuesArray);
             return valuesArray;
-=======
-            List<Node> nodes = new ArrayList<>();
-            this.inOrderHelper(this.root, nodes);
-            System.out.println(nodes);
-            Node[] nodeArray = new Node[nodes.size()];
-            nodeArray = nodes.toArray(nodeArray);
-            return nodeArray;
->>>>>>> master
         }
     }
 
