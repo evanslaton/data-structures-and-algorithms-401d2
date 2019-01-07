@@ -6,7 +6,6 @@ import java.util.List;
 public class BinaryTree<T> {
     public Node<T> root;
 
-
     // Constructor
     public BinaryTree() {
         this.root = null;
@@ -43,20 +42,11 @@ public class BinaryTree<T> {
             System.out.println("This tree is empty.");
             return null;
         } else {
-<<<<<<< HEAD
             List<T> values = new ArrayList<>();
             this.inOrderHelper(this.root, values);
             Object[] valuesArray = new Object[values.size()];
             valuesArray = values.toArray(valuesArray);
             return valuesArray;
-=======
-            List<Node> nodes = new ArrayList<>();
-            this.inOrderHelper(this.root, nodes);
-            System.out.println(nodes);
-            Node[] nodeArray = new Node[nodes.size()];
-            nodeArray = nodes.toArray(nodeArray);
-            return nodeArray;
->>>>>>> master
         }
     }
 
