@@ -1,6 +1,8 @@
 package graph;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 
 public class Graph<T> {
     // Instance Variables
@@ -45,5 +47,21 @@ public class Graph<T> {
     // Returns the total number of nodes in the graph
     public int size() {
         return vertices.size();
+    }
+
+    // Returns a list of nodes connected to the inputted node in breadth first order
+    public List<Node> breadthFirstTraversal(Node node) {
+        List<Node> nodes = new ArrayList<>();
+        nodes.add(node);
+        for (int i = 0; i < nodes.size(); i++) {
+            HashSet<Edge> nodesNeighbors = nodes.get(i).neighbors;
+            for (Edge m: nodesNeighbors) {
+                if (!nodes.contains(m.end)) {
+                    nodes.add(m.end);
+                }
+            }
+        }
+        System.out.println(nodes);
+        return nodes;
     }
 }
