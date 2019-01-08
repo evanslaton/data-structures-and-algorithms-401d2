@@ -2,7 +2,9 @@ package graph;
 
 import org.junit.Test;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 
 import static org.junit.Assert.*;
 
@@ -100,5 +102,45 @@ public class GraphTest {
 
         testGraph.addNode(3);
         assertEquals(testGraph.size(), 3);
+    }
+
+    @Test
+    public void testBreadthFirstTraversal() {
+        Graph testGraph = new Graph();
+        Node node1 = testGraph.addNode(10);
+        Node node2 = testGraph.addNode(211);
+        Node node3 = testGraph.addNode("The Office");
+
+        // Add edges
+        testGraph.addEdge(node1, node2, "A");
+        testGraph.addEdge(node2, node3, 7);
+        testGraph.addEdge(node3, node1, 2.0);
+
+        List<Node> list1 = testGraph.breadthFirstTraversal(node1);
+        List<Node> list2 = new ArrayList<>();
+        list2.add(node1);
+        list2.add(node3);
+        list2.add(node2);
+        for (int i = 0; i < list2.size(); i++) {
+            assertTrue(list1.get(i) == list2.get(i));
+        }
+
+        List<Node> list3 = testGraph.breadthFirstTraversal(node2);
+        List<Node> list4 = new ArrayList<>();
+        list4.add(node2);
+        list4.add(node1);
+        list4.add(node3);
+        for (int i = 0; i < list3.size(); i++) {
+            assertTrue(list3.get(i) == list4.get(i));
+        }
+
+        List<Node> list5 = testGraph.breadthFirstTraversal(node3);
+        List<Node> list6 = new ArrayList<>();
+        list6.add(node3);
+        list6.add(node1);
+        list6.add(node2);
+        for (int i = 0; i < list5.size(); i++) {
+            assertTrue(list5.get(i) == list6.get(i));
+        }
     }
 }
