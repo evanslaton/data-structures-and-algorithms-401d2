@@ -110,18 +110,21 @@ public class GraphTest {
         Node node1 = testGraph.addNode(10);
         Node node2 = testGraph.addNode(211);
         Node node3 = testGraph.addNode("The Office");
+        Node node4 = testGraph.addNode(473);
 
         // Add edges
         testGraph.addEdge(node1, node2, "A");
         testGraph.addEdge(node2, node3, 7);
         testGraph.addEdge(node3, node1, 2.0);
+        testGraph.addEdge(node1, node4, 3);
 
         List<Node> list1 = testGraph.breadthFirstTraversal(node1);
         List<Node> list2 = new ArrayList<>();
         list2.add(node1);
-        list2.add(node3);
         list2.add(node2);
-        for (int i = 0; i < list2.size(); i++) {
+        list2.add(node3);
+        list2.add(node4);
+        for (int i = 0; i < list1.size(); i++) {
             assertTrue(list1.get(i) == list2.get(i));
         }
 
@@ -130,6 +133,7 @@ public class GraphTest {
         list4.add(node2);
         list4.add(node1);
         list4.add(node3);
+        list4.add(node4);
         for (int i = 0; i < list3.size(); i++) {
             assertTrue(list3.get(i) == list4.get(i));
         }
@@ -139,7 +143,9 @@ public class GraphTest {
         list6.add(node3);
         list6.add(node1);
         list6.add(node2);
+        list6.add(node4);
         for (int i = 0; i < list5.size(); i++) {
+            list5.get(i).toString();
             assertTrue(list5.get(i) == list6.get(i));
         }
     }
