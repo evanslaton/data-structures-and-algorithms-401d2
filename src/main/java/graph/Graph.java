@@ -53,7 +53,6 @@ public class Graph<T> {
     public List<Node> breadthFirstTraversal(Node node) {
         List<Node> nodes = new ArrayList<>();
         nodes.add(node);
-//        for (Node n : nodes) {
         for (int i = 0; i < nodes.size(); i++) {
             HashSet<Edge> nodesNeighbors = nodes.get(i).neighbors;
             for (Edge m: nodesNeighbors) {
