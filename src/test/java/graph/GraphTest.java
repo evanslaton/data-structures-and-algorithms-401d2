@@ -145,7 +145,6 @@ public class GraphTest {
         list6.add(node2);
         list6.add(node4);
         for (int i = 0; i < list5.size(); i++) {
-            list5.get(i).toString();
             assertTrue(list5.get(i) == list6.get(i));
         }
     }

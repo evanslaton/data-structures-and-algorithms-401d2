@@ -61,6 +61,7 @@ public class Graph<T> {
                 }
             }
         }
+        System.out.println(nodes);
         return nodes;
     }
 }
