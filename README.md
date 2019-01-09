@@ -15,3 +15,4 @@
 * [Code Challenge 18 - Find the Maximum Value in a Binary Tree](readme/find-maximum-value-binary-tree.md)
 * [Code: Graphs](readme/graph.md)
 * [Code Challenge 26 - Breadth First Traversal](readme/breadth-first-graph.md)
+* [Code Challenge 27 - Get Edges](readme/get-edges.md)
