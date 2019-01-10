@@ -15,7 +15,6 @@ public class Node<T> {
 
     @Override
     public String toString() {
-//        System.out.println(this.value);
         return this.value.toString();
     }
 }
