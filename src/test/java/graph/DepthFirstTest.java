@@ -4,6 +4,7 @@ import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
 
 import static org.junit.Assert.*;
@@ -43,14 +44,10 @@ public class DepthFirstTest {
 
         assertTrue("answers should not be null", answers !=  null);
         assertTrue("Size of answers should be 7", answers.size() == 7);
-        int i = 0;
+
+        // Test to make sure all node are in the answer, important because nodeZ is an island
         for (Node n : answers) {
-            assertEquals("The nodes in compareList and answers should be in the same order", compareList.get(i), n);
-            i++;
+            assertTrue("The compareList should contain all the nodes", compareList.contains(n));
         }
-
-
-
-
     }
 }
