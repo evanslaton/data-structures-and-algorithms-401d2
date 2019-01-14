@@ -10,6 +10,19 @@ Implement a Hashtable with the following capabilities:
 
 ## Approach & Efficiency
 Each Hashtable has an array of Linked Lists that store key/value pairs.
+* add()
+  * O(1) time - inserts are immediate (in theory)
+  * O(1) space - Creates one new Node each time
+* find()
+  * O(1) time - lookups are immediate (in theory)
+  * O(1) space - no variables created
+* contains()
+  * O(1) time - lookups are immediate (in theory)
+  * O(1) space - no variables created
+* getHash()
+  * O(n) time - looping through a string
+  * O(1) space - creates only one variable
+
 
 ## API
 |   Class   |    Methods    |                            Method Description                                          |
