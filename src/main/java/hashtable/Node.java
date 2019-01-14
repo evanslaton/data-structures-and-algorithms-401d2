@@ -1,13 +1,37 @@
 package hashtable;
 
 public class Node<T> {
-    protected T key;
+    protected String key;
     protected T value;
     protected Node next;
 
-    public Node(T key, T value) {
+    public Node(String key, T value) {
         this.key = key;
         this.value = value;
         this.next = null;
     }
-}
+
+    public String getKey() {
+        return this.key;
+    }
+
+    public void setKey(String newKey) {
+        this.key = newKey;
+    }
+
+    public T getValue() {
+        return this.value;
+    }
+
+    public void setValue(T newValue) {
+        this.value = newValue;
+    }
+
+    public Node getNext() {
+        return this.next;
+    }
+
+    public void setNext(Node newNext) {
+        this.next = newNext;
+    }
+ }
