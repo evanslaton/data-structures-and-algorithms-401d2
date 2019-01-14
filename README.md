@@ -17,3 +17,4 @@
 * [Code Challenge 26 - Breadth First Traversal](readme/breadth-first-graph.md)
 * [Code Challenge 27 - Get Edges](readme/get-edges.md)
 * [Code Challenge 28 -  Depth First Preorder Traversal](readme/depth-first.md)
+* [Code Hashmaps](readme/hashtable.md)
