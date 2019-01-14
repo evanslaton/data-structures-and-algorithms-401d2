@@ -8,6 +8,8 @@ public class Hashtable<T> {
     public Hashtable() {
         this.DEFAULT_CAPACITY = 10;
         this.table = new LinkedList[DEFAULT_CAPACITY];
+
+        // Adds a LinkedList to each index of the Hashtable array upon instantiation
         Hashtable.addLinkedListsToTable(this.table);
     }
 
@@ -15,9 +17,12 @@ public class Hashtable<T> {
     public Hashtable(int DEFAULT_CAPACITY) {
         this.DEFAULT_CAPACITY = DEFAULT_CAPACITY;
         this.table = new LinkedList[DEFAULT_CAPACITY];
+
+        // Adds a LinkedList to each index of the Hashtable array upon instantiation
         Hashtable.addLinkedListsToTable(this.table);
     }
 
+    // Adds a LinkedList to each index of the Hashtable array
     protected static void addLinkedListsToTable(LinkedList[] table) {
         for (int i = 0; i < table.length; i++) {
             table[i] = new LinkedList();
@@ -30,7 +35,7 @@ public class Hashtable<T> {
         this.table[hashedKey].append(key, value);
     }
 
-    // Adds a node containing a key/value pair to the HashTable
+    // Takes in the key and returns the value from key/value pair
     public T find(String key) {
         int hashedKey = this.getHash(key);
         return (T) this.table[hashedKey].findValue(key);
@@ -46,11 +51,8 @@ public class Hashtable<T> {
     protected int getHash(String key) {
         int hash = 0;
         for (int i = 0; i < key.length(); i++) {
-            hash += key.charAt(i);
+            hash += key.charAt(i); // Adds the ASCII value of the current character to hash
         }
-        return hash % DEFAULT_CAPACITY;
+        return hash % DEFAULT_CAPACITY; // Divides hash by the length of the Hashtable's array
     }
-
-
-
 }
