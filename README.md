@@ -19,3 +19,4 @@
 * [Code Challenge 28 -  Depth First Preorder Traversal](readme/depth-first.md)
 * [Code Hashmaps](readme/hashtable.md)
 * [Code Challenge 31 - Repeated Word](readme/repeated-word.md)
+* [Code Challenge 32 - Tree Intersection](readme/tree-intersection.md)
