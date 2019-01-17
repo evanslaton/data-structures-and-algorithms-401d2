@@ -14,4 +14,4 @@ Implement a simplified LEFT JOIN for 2 Hashmaps.
 * O(n) Time -> loop through a HashMap of n length
 
 ## Solution
-![left-join](../assets/array_binary_search.jpg)
+![left-join](../assets/left-join.jpg)
