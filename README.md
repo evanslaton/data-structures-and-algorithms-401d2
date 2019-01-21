@@ -21,3 +21,4 @@
 * [Code Challenge 31 - Repeated Word](readme/repeated-word.md)
 * [Code Challenge 32 - Tree Intersection](readme/tree-intersection.md)
 * [Code Challenge 33 - Left Joins](readme/left-join.md)
+* [Code: Sorting Algorithms](readme/insertion_sort.md)
