@@ -23,3 +23,4 @@
 * [Code Challenge 33 - Left Joins](readme/left-join.md)
 * [Code: Sorting Algorithms](readme/insertion_sort.md)
 * [Code Challenge 36 - Merge Sort](readme/merge_sort.md)
+* [Code Challenge 37 - Quick Sort](readme/quicksort.md)
