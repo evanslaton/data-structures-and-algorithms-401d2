@@ -9,4 +9,4 @@ Write a function that accepts an array of positive integers, and returns an arra
 * O(n) space - create ArrayLists whose sizes are dictated by the input array
 
 ## Solution
-![radixsort](../assets/radixsort.jpg)
+![radixsort](../assets/radix_sort.jpg)
