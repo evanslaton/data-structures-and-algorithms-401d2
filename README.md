@@ -32,4 +32,4 @@
 | [User Stories](assets/user-stories.md) 
 | [Project Architecture](assets/architecture.md)
 |[Change Logs](assets/change-logs.md)|
-|-|-|-|-|-|
+|--|--|--|--|--|
