@@ -25,7 +25,3 @@
 * [Code Challenge 36 - Merge Sort](readme/merge_sort.md)
 * [Code Challenge 37 - Quick Sort](readme/quicksort.md)
 * [Code Challenge 38 - Radix Sort](readme/radixsort.md)
-
-
-|[Main README](README.md)| [How to Play](assets/how-to-play.md)|[User Stories](assets/user-stories.md)|[Project Architecture](assets/architecture.md)|[Change Logs](assets/change-logs.md)|
-|-|-|-|-|-|
